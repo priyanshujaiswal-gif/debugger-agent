@@ -1,5 +1,8 @@
 import os
+from dotenv import load_dotenv
 import streamlit as st
+
+load_dotenv()  # loads OPENAI_API_KEY from .env when running locally
 
 if "OPENAI_API_KEY" in st.secrets:
     os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
